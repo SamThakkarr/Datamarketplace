@@ -417,20 +417,29 @@ async function listData() {
     }
 }
 
-document.getElementById('uploadForm').addEventListener('submit', async (event) => {
-          event.preventDefault();
+// Inside script.js
 
-          const formData = new FormData(event.target);
+// ... (Your existing code)
 
-          try {
-              const response = await fetch('/', {
-                  method: 'POST',
-                  body: formData,
-              });
+// Update the event listener to prevent the default form submission and handle the prediction
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+		event.preventDefault();
 
-              const result = await response.json();
-              document.getElementById('para').innerText = `Prediction: ${result.prediction}`;
-          } catch (error) {
-              console.error('Error:', error);
-          }
-      });
+		const formData = new FormData(event.target);
+
+		try {
+			const response = await fetch('/', {
+				method: 'POST',
+				body: formData,
+			});
+
+			const result = await response.json();
+			document.getElementById('para').innerHTML = `Prediction: ${result.prediction}`;
+		} catch (error) {
+			console.error('Error:', error);
+		}
+    });
+        });
+
+
