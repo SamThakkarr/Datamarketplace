@@ -1,0 +1,102 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #57728c, #201923);
+    color: #fff;
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the heading */
+h1 {
+    color: #57728c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(49, 38, 38, 0.3);
+}
+
+/* Style the user panel */
+#userPanel {
+    /* Add styling as needed */
+}
+
+/* Style the marketplace */
+#marketplace {
+    /* Add styling as needed */
+}
+
+/* Style the seller page */
+#sellerPage {
+    margin-top: 20px;
+}
+
+/* Style form elements */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    color: #000000;
+    font-size: 16px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+    
+}
+
+button {
+    background-color: #2ecc71;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Style the prediction result */
+#predictionResult {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #3498db;
+    border-radius: 8px;
+}
+
+/* Center the "Sell Your Dataset" heading */
+#sellerPage h2 {
+    text-align: center;
+    color: #010c14;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Add responsive styles if needed */
+@media screen and (max-width: 600px) {
+    /* Add responsive styles as needed */
+}
