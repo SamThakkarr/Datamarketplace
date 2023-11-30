@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Marketplace</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.6/dist/web3.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</head>
+<body>
+    <h1>Data Marketplace</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter dataset name"><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" placeholder="Enter dataset description"></textarea><br>
+
+    <label for="price">Price (in Wei):</label>
+    <input type="number" id="price" placeholder="Enter dataset price"><br>
+    <button onclick="price(df, info)">predict data</button>
+
+    <button onclick="listData()">List Dataset</button>
+    <h2>Price Prediction</h2>
+    <form id="uploadForm" enctype="multipart/form-data" method="post">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload and Predict</button>
+    </form>
+    <p id="para"></p>
+    <div id="result"></div>
+</body>
+</html>
